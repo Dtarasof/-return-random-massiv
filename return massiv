@@ -1,0 +1,22 @@
+
+/* створює масив цілих чисел і повертає його(return) розміром який передається в параметрах (createArray(int size))
+ наповнює масив, що ми передаємо в параметрах, рандомними числами.
+*/
+import java.util.Arrays;
+import java.util.Scanner;
+public class returning {
+   public int[] createArray() {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Длинна массива:: ");
+      int size = sc.nextInt();
+      int[] myArray = new int[size];
+      for (int i = 0; i < myArray.length; i++) {
+      myArray[i] = (int) (Math.random()*50000 - 10000);}
+             return myArray;
+   }
+   public static void main(String args[]) {
+      returning obj = new returning();
+      int arr[] = obj.createArray();
+      System.out.println("Массив создан: "+Arrays.toString(arr));
+   }
+}
